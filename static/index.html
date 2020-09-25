@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5G petition stats</title>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    #chart {
+      max-width: 800px;
+      margin: auto;
+    }
+    .infoBlock {
+      border: thin solid rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      padding: 20px;
+      text-align: left;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="infoBlock">
+    <div><strong>Dernier relevé:</strong> <span id="currentValueDisplay">?</span> signatures</div>
+    <div><strong>Pétition:</strong> <a href="http://change.org/5g">change.org/5g</a></div>
+  </div>
+  <div id='chart'><!-- Plotly chart will be drawn here --></div>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCWjxHmHAe64JngCxjQoPWBAUUiw3vEdrg",
+      authDomain: "bg-common.firebaseapp.com",
+      databaseURL: "https://bg-common.firebaseio.com",
+      projectId: "bg-common",
+      storageBucket: "bg-common.appspot.com",
+      messagingSenderId: "394270776657",
+      appId: "1:394270776657:web:efb05d68f0d020be59c770"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
