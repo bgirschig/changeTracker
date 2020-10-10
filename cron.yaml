@@ -1,5 +1,5 @@
 cron:
   - description: "record petition signature count"
     url: /recordSignatureCount
-    schedule: every 2 minutes
+    schedule: every 10 minutes
   
